@@ -5,21 +5,21 @@ export default function Testimonials() {
     {
       name: "María González",
       position: "CEO, TechStart",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Maria&backgroundColor=b6e3f4,c0aede,d1d4f9",
       content: "SaaSify ha transformado completamente la manera en que gestionamos nuestro negocio. La plataforma es intuitiva y el soporte es excepcional.",
       rating: 5
     },
     {
       name: "Carlos Rodríguez",
       position: "Director de IT, InnovaCorp",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Carlos&backgroundColor=b6e3f4,c0aede,d1d4f9",
       content: "La seguridad y el rendimiento de SaaSify superaron nuestras expectativas. Definitivamente la mejor inversión que hemos hecho.",
       rating: 5
     },
     {
       name: "Ana Martínez",
       position: "Fundadora, DigitalFlow",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ana&backgroundColor=b6e3f4,c0aede,d1d4f9",
       content: "Desde que implementamos SaaSify, nuestra productividad aumentó un 40%. Es exactamente lo que necesitábamos para escalar nuestro negocio.",
       rating: 5
     }
