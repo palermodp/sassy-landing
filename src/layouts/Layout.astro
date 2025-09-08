@@ -4,16 +4,77 @@ import Header from "../components/Header.jsx";
 
 const navLinks = [
   { name: "Inicio", href: "/" },
-  { name: "Features", href: "#features" },
+  { name: "Características", href: "#features" },
+  { name: "Testimonios", href: "#testimonials" },
+  { name: "Precios", href: "#pricing" },
   { name: "Contacto", href: "#contact" },
 ];
+
+// SEO Data
+const seoData = {
+  title: "SaaSify - La Plataforma SaaS Moderna que Revoluciona tu Negocio",
+  description: "Descubre SaaSify, la plataforma SaaS segura, rápida y confiable. Accede a tus datos desde cualquier lugar con total protección y rendimiento excepcional.",
+  keywords: "SaaS, plataforma, negocio, nube, seguridad, rendimiento, software como servicio",
+  author: "SaaSify Team",
+  url: "https://saasify.com",
+  image: "/images/sassify.png",
+  type: "website"
+};
 ---
 
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi SaaS Landing</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>{seoData.title}</title>
+    <meta name="description" content={seoData.description} />
+    <meta name="keywords" content={seoData.keywords} />
+    <meta name="author" content={seoData.author} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={seoData.url} />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content={seoData.type} />
+    <meta property="og:title" content={seoData.title} />
+    <meta property="og:description" content={seoData.description} />
+    <meta property="og:image" content={seoData.image} />
+    <meta property="og:url" content={seoData.url} />
+    <meta property="og:site_name" content="SaaSify" />
+    <meta property="og:locale" content="es_ES" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={seoData.title} />
+    <meta name="twitter:description" content={seoData.description} />
+    <meta name="twitter:image" content={seoData.image} />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "SaaSify",
+        "description": "La plataforma SaaS moderna que revoluciona tu negocio",
+        "url": "https://saasify.com",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "SaaSify",
+          "url": "https://saasify.com"
+        }
+      }
+    </script>
   </head>
   <body class="bg-gray-100">
     <Header {navLinks} client:load />
